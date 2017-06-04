@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>The Psychic Game</title>
+		
+
+</head>
+<body>
+<Div>
+	<h1>Psychic Game</h1>
+		</Div>
+
+<div id=game>
+		<p>Guess What Letter I am Thinking Of</p>
+			<p id="wins">Wins: 0</p>
+				<p id="losses">Losses: 0</p>
+					<p id="guessesleft">Guesses Left: 9</p>
+						<p id=guessesfar>Your Guesses So Far: </p>
+							</div>
+<script type="text/javascript">
+var wins = 0
+var losses = 0
+var guessesleft = 0
+var guessessofar = 
+
+ document.onkeyup = function(event) {
+
+ 	var userGuess = event.key;
+
+
+var letters = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
+
+document.getElementById("guessesfar").innerHTML += userGuess + " ";
+
+var computerGuess= letters[Math.floor(Math.random() * letters.length)];
+
+		
+		
+      }
+       if(userGuess === computerGuess){
+       	wins++; 
+       	document.getElementById("wins").innerHTML = "Wins: " + wins;
+       }
+       else {guessesleft--;
+       	document.getElementById("guessesleft").innerHTML = "guessesleft: " + guessesleft;
+      }
+
+      if(guessesleft < 1) {
+      	losses++;
+      	document.getElementById("losses").innerHTML = "losses: " + losses;
+      }       
+      if(guessesleft === 0){
+      	guessesleft++ * 9;
+      	document.getElementById("demo").innerHTML = "guessesleft" + guessesleft; 
+      }
+
+           
+           
+
+
+</script>
+</body>
+	</html>
