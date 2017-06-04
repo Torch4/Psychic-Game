@@ -21,12 +21,12 @@
 var wins = 0
 var losses = 0
 var guessesleft = 0
-var guessessofar = 
+var guessessofar = 0 
 
  document.onkeyup = function(event) {
 
  	var userGuess = event.key;
-
+(event.keyCode >= '97' || event.keyCode <= '122')
 
 var letters = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
 
@@ -41,7 +41,7 @@ var computerGuess= letters[Math.floor(Math.random() * letters.length)];
        	wins++; 
        	document.getElementById("wins").innerHTML = "Wins: " + wins;
        }
-       else {guessesleft--;
+       else (guessesleft--);
        	document.getElementById("guessesleft").innerHTML = "guessesleft: " + guessesleft;
       }
 
@@ -49,10 +49,9 @@ var computerGuess= letters[Math.floor(Math.random() * letters.length)];
       	losses++;
       	document.getElementById("losses").innerHTML = "losses: " + losses;
       }       
-      if(guessesleft === 0){
-      	guessesleft++ * 9;
-      	document.getElementById("demo").innerHTML = "guessesleft" + guessesleft; 
-      }
+   
+     }
+      
 
            
            
