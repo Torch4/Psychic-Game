@@ -32,7 +32,7 @@ var letters = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", 
 
 document.getElementById("guessesfar").innerHTML += userGuess + " ";
 
-var computerGuess= letters[Math.floor(Math.random() * letters.length)];
+var computerGuess = letters[Math.floor(Math.random() * letters.length)];
 
 		
 		
@@ -41,7 +41,7 @@ var computerGuess= letters[Math.floor(Math.random() * letters.length)];
        	wins++; 
        	document.getElementById("wins").innerHTML = "Wins: " + wins;
        }
-       else (guessesleft--);
+       else (guessesleft--); {
        	document.getElementById("guessesleft").innerHTML = "guessesleft: " + guessesleft;
       }
 
@@ -50,7 +50,7 @@ var computerGuess= letters[Math.floor(Math.random() * letters.length)];
       	document.getElementById("losses").innerHTML = "losses: " + losses;
       }       
    
-     }
+     
       
 
            
