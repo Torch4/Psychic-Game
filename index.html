@@ -2,61 +2,23 @@
 <html>
 <head>
 	<title>The Psychic Game</title>
-		
-
+<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+<script src="game.js"></script>
+<link rel="stylesheet" type="text/css" href="assets/css/reset.css">  
 </head>
 <body>
 <Div>
-	<h1>Psychic Game</h1>
+	<h1 id=name>Psychic Game</h1>
 		</Div>
 
-<div id=game>
-		<p>Guess What Letter I am Thinking Of</p>
-			<p id="wins">Wins: 0</p>
-				<p id="losses">Losses: 0</p>
-					<p id="guessesleft">Guesses Left: 9</p>
-						<p id=guessesfar>Your Guesses So Far: </p>
+<div class="game">
+		<p id="top">Guess What Letter I am Thinking Of</p><br><br>
+			<p id="wins">Wins: 0</p><br>
+				<p id="losses">Losses: 0</p><br>
+					<p id="guessesleft">Guesses Left: 9</p><br>
+						<p id=guessesfar>Your Guesses So Far: </p><br>
 							</div>
-<script type="text/javascript">
-var wins = 0
-var losses = 0
-var guessesleft = 0
-var guessessofar = 0 
 
- document.onkeyup = function(event) {
-
- 	var userGuess = event.key;
-(event.keyCode >= '97' || event.keyCode <= '122')
-
-var letters = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
-
-document.getElementById("guessesfar").innerHTML += userGuess + " ";
-
-var computerGuess = letters[Math.floor(Math.random() * letters.length)];
-
-		
-		
-      }
-       if(userGuess === computerGuess){
-       	wins++; 
-       	document.getElementById("wins").innerHTML = "Wins: " + wins;
-       }
-       else (guessesleft--); {
-       	document.getElementById("guessesleft").innerHTML = "guessesleft: " + guessesleft;
-      }
-
-      if(guessesleft < 1) {
-      	losses++;
-      	document.getElementById("losses").innerHTML = "losses: " + losses;
-      }       
-   
-     
-      
-
-           
-           
-
-
-</script>
+ 
 </body>
 	</html>

@@ -1,32 +1,44 @@
-      var letter = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w","x", "y", "z"]
+var wins = 0
+var losses = 0
+var guessesleft = 9
+var guessessofar = 0 
 
-      var wins = 0;
+ 	document.onkeyup = function(event) {
+    
+
+    if((event.keyCode >= '97' || event.keyCode <= '122') {
+        var userGuess = event.key;
+        ...
+    }
+    else {
+        alert("You can only guess a letter!");
+    }
+}
+var letters = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
+
+document.getElementById("guessesfar").innerHTML += userGuess + " ";
+
+var computerGuess = letters[Math.floor(Math.random() * letters.length)];
+
+		
+		
       
-      var losses = 0;
-      
-      var guessesleft = 9;
-      
-      var guessesfar = 0;
+       if(userGuess === computerGuess){
+       	wins++; 
+       	document.getElementById("wins").innerHTML = "Wins: " + wins;
+       }
+       else (guessesleft--); {
+       	document.getElementById("guessesleft").innerHTML = "guessesleft: " + guessesleft;
+      }
 
-
-		document.onkeyup = function(event) {
-			
-			var userGuess = event.key;
-				
-				var computerGuess = options[Math.floor(Math.random() * options.length)];
-
-					if(userGuess === computerGuess)
-
-						wins++;
-
-            if(userGuess == computerGuess) 
-            	losses++; guessesleft--;
-            }
-        }
-
-        document.getElementById("wins").innerHTML = "Wins: " + wins;
-        document.getElementById("ties").innerHTML = "losses " + ties;
-        document.getElementById("losses").innerHTML = "guessesleft" - guessesleft;
-        
-        
-      };
+      if(guessesleft < 1) {
+      	losses++;
+      	document.getElementById("losses").innerHTML = "losses: " + losses;
+}
+      	if(guessesleft < 1) {
+      	  guessesleft + 9;
+      	  document.getElementById("guessesleft").innerHTML = "guessesleft: " + guessesleft;
+}
+      }       
+   
+     }
