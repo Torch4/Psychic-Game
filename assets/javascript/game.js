@@ -1,15 +1,16 @@
+//Sets resets values of game beforestarting game
 var wins = 0;
 var losses = 0;
 var guessesleft = 9;
 var guessessofar = 0;
-
+//records value pressed when the key is relaesed
 document.onkeyup = function(event) {
   if (event.key.match(/^[a-z]$/)) {
     var userGuess = event.key;
   } else {
     alert("You can only guess a letter!");
   }
-
+//sets possible correct answers
   var letters = [
     "a",
     "b",
@@ -38,7 +39,7 @@ document.onkeyup = function(event) {
     "y",
     "z"
   ];
-
+//Runs Game
   document.getElementById("guessesfar").innerHTML += userGuess + " ";
 
   var computerGuess = letters[Math.floor(Math.random() * letters.length)];
